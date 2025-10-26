@@ -1,32 +1,40 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SkeletonMovement : MonoBehaviour
 {
-    public float moveSpeed = 3f;
-    public float rotateSpeed = 720f;
+    public float moveSpeed = 5f;
+    public Transform cameraTransform;
+
+    private Vector2 moveInput;
     private Animator animator;
 
-    void Start()
+    private void Awake()
     {
-        animator = GetComponent<Animator>(); // Получаем компонент Animator
+        animator = GetComponent<Animator>();
     }
 
-    void Update()
+    public void OnMove(InputValue value)
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        moveInput = value.Get<Vector2>();
+    }
 
-        Vector3 direction = new Vector3(h, 0, v).normalized;
-        float speed = direction.magnitude * moveSpeed;
+    private void Update()
+    {
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
 
-        // Передаём значение в Animator
-        animator.SetFloat("Speed", speed);
+        forward.y = 0f;
+        right.y = 0f;
 
-        if (speed > 0.1f)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self);
-        }
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 moveDirection = forward * moveInput.y + right * moveInput.x;
+
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+        // Управление анимацией
+        animator.SetFloat("Speed", moveDirection.magnitude);
     }
 }
