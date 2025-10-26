@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 
 public class SkeletonMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 9f;
     public Transform cameraTransform;
 
     private Vector2 moveInput;
+    private bool isRunning = false;
     private Animator animator;
 
     private void Awake()
@@ -17,6 +19,11 @@ public class SkeletonMovement : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    public void OnRun(InputValue value)
+    {
+        isRunning = value.isPressed;
     }
 
     private void Update()
@@ -31,10 +38,11 @@ public class SkeletonMovement : MonoBehaviour
         right.Normalize();
 
         Vector3 moveDirection = forward * moveInput.y + right * moveInput.x;
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
 
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        transform.position += moveDirection * currentSpeed * Time.deltaTime;
 
-        // Управление анимацией
-        animator.SetFloat("Speed", moveDirection.magnitude);
+        // Анимация: скорость движения
+        animator.SetFloat("Speed", moveDirection.magnitude * (isRunning ? 2f : 1f));
     }
 }
