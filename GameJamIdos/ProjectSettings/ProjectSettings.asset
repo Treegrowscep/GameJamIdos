@@ -144,7 +144,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -180,7 +181,7 @@ PlayerSettings:
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
-  stripEngineCode: 1
+  stripEngineCode: 0
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -522,7 +523,13 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
+  - m_BuildTarget: WebGL
+    m_StaticBatching: 0
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -558,6 +565,9 @@ PlayerSettings:
   - serializedVersion: 3
     m_BuildTarget: Android
     m_Formats: 03000000
+  - serializedVersion: 3
+    m_BuildTarget: WebGL
+    m_Formats: 05000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -797,7 +807,7 @@ PlayerSettings:
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
-  webGLNameFilesAsHashes: 0
+  webGLNameFilesAsHashes: 1
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
   webGLDebugSymbols: 0
@@ -810,7 +820,7 @@ PlayerSettings:
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  webGLDecompressionFallback: 0
+  webGLDecompressionFallback: 1
   webGLInitialMemorySize: 32
   webGLMaximumMemorySize: 2048
   webGLMemoryGrowthMode: 2
@@ -823,7 +833,13 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
+    PS4: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
+    Standalone: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
+    WebGL: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
+    XboxOne: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
+    iPhone: IDOSGAMES_NOTIFICATIONS_ANDROID;IDOSGAMES_NOTIFICATIONS_IOS;IDOSGAMES_MARKETPLACE;IDOSGAMES_CRYPTO_WALLET
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -834,7 +850,7 @@ PlayerSettings:
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
-  allowUnsafeCode: 0
+  allowUnsafeCode: 1
   useDeterministicCompilation: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
@@ -920,7 +936,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 5bcc821a-5f6a-4f89-9a33-54ae5dbb3e1a
   framebufferDepthMemorylessMode: 0
