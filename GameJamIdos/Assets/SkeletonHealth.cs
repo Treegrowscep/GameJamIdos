@@ -51,7 +51,7 @@ public class SkeletonHealth : MonoBehaviour
         transform.rotation = Quaternion.identity;
 
         // Отключаем CameraLook на активной камере
-        var lookScript = FindObjectOfType<CameraLook>();
+        var lookScript = Object.FindAnyObjectByType<CameraLook>();
         if (lookScript != null)
             lookScript.isAlive = false;
 
