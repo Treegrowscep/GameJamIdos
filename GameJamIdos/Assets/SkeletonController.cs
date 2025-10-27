@@ -1,14 +1,21 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SkeletonAI : MonoBehaviour
+public class SkeletonController : MonoBehaviour
 {
+    public float attackRange = 2f;
+    public float attackCooldown = 1f;
+    public int damage = 10;
+
     private NavMeshAgent agent;
+    private Animator animator;
     private SkeletonTeam team;
+    private float lastAttackTime;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         team = GetComponent<SkeletonTeam>();
     }
 
@@ -17,7 +24,24 @@ public class SkeletonAI : MonoBehaviour
         GameObject target = FindNearestEnemy();
         if (target != null)
         {
+            float distance = Vector3.Distance(transform.position, target.transform.position);
             agent.SetDestination(target.transform.position);
+
+            animator.SetFloat("Speed", agent.velocity.magnitude);
+
+            if (distance <= attackRange && Time.time - lastAttackTime > attackCooldown)
+            {
+                animator.SetTrigger("Attack");
+                lastAttackTime = Time.time;
+
+                var health = target.GetComponent<EnemyHealth>();
+                if (health != null)
+                    health.TakeDamage(damage);
+            }
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
         }
     }
 

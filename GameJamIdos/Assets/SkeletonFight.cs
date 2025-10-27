@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SkeletonFight : MonoBehaviour
 {
+    [Header("Combat Settings")]
     public float attackRange = 2f;
     public float attackCooldown = 1f;
     public int damage = 10;
@@ -26,8 +27,12 @@ public class SkeletonFight : MonoBehaviour
             {
                 if (Time.time - lastAttackTime > attackCooldown)
                 {
-                    hit.GetComponent<SkeletonHealth>()?.TakeDamage(damage);
-                    lastAttackTime = Time.time;
+                    EnemyHealth health = hit.GetComponent<EnemyHealth>();
+                    if (health != null)
+                    {
+                        health.TakeDamage(damage);
+                        lastAttackTime = Time.time;
+                    }
                 }
             }
         }
