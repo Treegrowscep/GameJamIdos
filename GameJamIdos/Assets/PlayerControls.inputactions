@@ -25,24 +25,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "c22e1f60-deb3-4087-96e3-923abea0f6a6",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "71c8ef9f-7df1-4caf-9e2a-87bbd5d4b5a2",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Run",
                     "type": "Button",
                     "id": "493ac837-c01d-457c-8f83-3e74434c8f7d",
@@ -64,6 +46,15 @@
                     "name": "AttackSecondary",
                     "type": "Button",
                     "id": "c1a89343-9881-42dc-addf-36e8ff6c4d40",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "f784722e-0d7e-4edd-9ca9-f3eac7408aab",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -139,28 +130,6 @@
                 },
                 {
                     "name": "",
-                    "id": "84f7ee5a-a2e8-47b7-aa41-620fbcd33d32",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a0ef794c-712c-486c-a63d-0512fdfbc76a",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6c45a170-3d4b-4912-bb01-71e3ae8076d0",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -189,6 +158,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "AttackSecondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a814ef22-fd25-4d51-aa0d-124c46669f8a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
