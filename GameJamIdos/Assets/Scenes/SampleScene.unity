@@ -738,6 +738,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a599bd67f72e24999e1d5d60f433d0, type: 3}
+--- !u!1 &97019243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97019244}
+  m_Layer: 0
+  m_Name: Blue Skeleton Spawnpoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97019244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97019243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -283.7, y: 1, z: 64.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &98389116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -832,7 +863,7 @@ Transform:
   m_GameObject: {fileID: 114499626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.35416, y: 0.07169, z: -416.2}
+  m_LocalPosition: {x: -47.35416, y: 34.4, z: -416.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1222,6 +1253,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e7c5327410d8f9459bd83e39b86b615, type: 3}
+--- !u!1 &152719197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152719198}
+  m_Layer: 0
+  m_Name: Red Skeleton SpawnPoint1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152719198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152719197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -337.6, y: 0.07171, z: -237.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &169791257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1595,6 +1657,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
+--- !u!1 &233125391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 233125392}
+  m_Layer: 0
+  m_Name: Red Skeleton SpawnPoint1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &233125392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233125391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -162.4, y: 0.07171, z: -228.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &242981226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2323958191304354139, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
@@ -1729,10 +1822,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 35
-  m_Acceleration: 200
+  m_Acceleration: 80
   avoidancePriority: 50
   m_AngularSpeed: 600
-  m_StoppingDistance: 2.5
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -1767,8 +1860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e006c0206450764793eedc03e3d456a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonAI
-  detectionRadius: 100000
-  updateRate: 2
+  detectionRadius: 10000
+  updateRate: 10
 --- !u!114 &245898745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,7 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonAI
   detectionRadius: 30
-  updateRate: 0.2
+  updateRate: 0.3
 --- !u!114 &397107996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2540,6 +2633,10 @@ MonoBehaviour:
   SkeletonPrefab: {fileID: 1387719504}
   SpawnPoints:
   - {fileID: 698647087}
+  - {fileID: 995950417}
+  - {fileID: 152719198}
+  - {fileID: 1051715079}
+  - {fileID: 233125392}
   SkeletonsPerTeam: 3
   spawnSpread: 10
 --- !u!4 &397107997
@@ -3225,6 +3322,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2323958191304354139, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
   m_PrefabInstance: {fileID: 89662395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &531489658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531489659}
+  m_Layer: 0
+  m_Name: Blue Skeleton Spawnpoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531489659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531489658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -330.7, y: 1, z: 228.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &539315999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4033,7 +4161,7 @@ Transform:
   m_GameObject: {fileID: 698647086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.5, y: 58.5, z: -275.7}
+  m_LocalPosition: {x: -125.5, y: 1, z: -275.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5707,6 +5835,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2323958191304354139, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
   m_PrefabInstance: {fileID: 1418666621}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &995950416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995950417}
+  m_Layer: 0
+  m_Name: Red Skeleton SpawnPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &995950417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995950416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.4, y: 0.07171, z: -272.94388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998935417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5732,7 +5891,7 @@ Transform:
   m_GameObject: {fileID: 998935417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -159.4924, y: 29.8, z: 185.3}
+  m_LocalPosition: {x: -159.4924, y: 1, z: 185.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5905,6 +6064,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2323958191304354139, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
   m_PrefabInstance: {fileID: 812229821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1051715078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051715079}
+  m_Layer: 0
+  m_Name: Red Skeleton SpawnPoint1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051715079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051715078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.4, y: 0.07171, z: -230.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1054631092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4725601068119765836, guid: 4eead59d2ca69554e9356d924e52cd51, type: 3}
@@ -8375,7 +8565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonAI
   detectionRadius: 100000
-  updateRate: 5
+  updateRate: 10
 --- !u!114 &1387719513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9477,6 +9667,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c202ad51d2c8ce469a08336aefb2025, type: 3}
+--- !u!1 &1584642399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584642400}
+  m_Layer: 0
+  m_Name: Blue Skeleton Spawnpoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584642400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584642399}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 1, z: 235.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1585564976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10452,8 +10673,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 80
+  m_CollisionDetection: 1
 --- !u!114 &1713479879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12819,13 +13040,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067227124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e006c0206450764793eedc03e3d456a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   detectionRadius: 30
-  updateRate: 0.2
+  updateRate: 0.3
 --- !u!114 &2067227127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12833,7 +13054,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067227124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21f5b0d30f2939942a0fc3a7ebf39bca, type: 3}
   m_Name: 
@@ -12856,7 +13077,10 @@ MonoBehaviour:
   SkeletonPrefab: {fileID: 245898734}
   SpawnPoints:
   - {fileID: 998935418}
-  SkeletonsPerTeam: 3
+  - {fileID: 97019244}
+  - {fileID: 1584642400}
+  - {fileID: 531489659}
+  SkeletonsPerTeam: 4
   spawnSpread: 10
 --- !u!4 &2067227129
 Transform:
@@ -13472,6 +13696,13 @@ SceneRoots:
   - {fileID: 2067227129}
   - {fileID: 397107997}
   - {fileID: 998935418}
+  - {fileID: 97019244}
+  - {fileID: 1584642400}
+  - {fileID: 531489659}
   - {fileID: 245898733}
   - {fileID: 1981872124}
   - {fileID: 698647087}
+  - {fileID: 995950417}
+  - {fileID: 152719198}
+  - {fileID: 1051715079}
+  - {fileID: 233125392}

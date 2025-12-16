@@ -4,21 +4,31 @@ using UnityEngine.AI;
 public class SkeletonAI : MonoBehaviour
 {
     public float detectionRadius = 30f;
-    public float updateRate = 0.5f; // реже обновляем путь — меньше рывков
+    public float updateRate = 0.3f;
 
     private NavMeshAgent agent;
     private SkeletonTeam team;
     private Animator anim;
-    private float timer;
 
-    private Transform currentTarget; // ✅ сохраняем цель
-    private Vector3 lastTargetPos;   // ✅ последняя позиция цели
+    private Transform currentTarget;
+    private float timer;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         team = GetComponent<SkeletonTeam>();
         anim = GetComponent<Animator>();
+
+        // ✅ Плавное движение
+        agent.autoBraking = false;
+
+        // ✅ Улучшенное избегание столкновений
+        agent.obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+        agent.avoidancePriority = Random.Range(20, 80);
+
+        // ✅ Моментальный старт
+        FindTarget();
+        UpdateDestination();
     }
 
     void Update()
@@ -28,13 +38,12 @@ public class SkeletonAI : MonoBehaviour
         {
             timer = 0f;
             FindTarget();
-            UpdatePath();
+            UpdateDestination();
         }
 
         UpdateAnimation();
     }
 
-    // ✅ Ищем ближайшего врага, но НЕ обновляем путь здесь
     void FindTarget()
     {
         GameObject[] all = GameObject.FindGameObjectsWithTag("Skeleton");
@@ -59,43 +68,38 @@ public class SkeletonAI : MonoBehaviour
             }
         }
 
-        if (nearest != null)
-        {
-            currentTarget = nearest;
-        }
+        currentTarget = nearest;
     }
 
-    // ✅ Обновляем путь ТОЛЬКО если цель реально сместилась
-    void UpdatePath()
+    void UpdateDestination()
     {
         if (currentTarget == null) return;
 
-        float distMoved = Vector3.Distance(lastTargetPos, currentTarget.position);
+        // ✅ РАССЫПАНИЕ — каждый скелет бежит в свою точку вокруг врага
+        Vector3 offset = Random.insideUnitSphere * 1.5f;
+        offset.y = 0;
 
-        if (distMoved > 1f) // ✅ обновляем путь только если цель сместилась > 1 метра
-        {
-            agent.isStopped = false;
-            agent.SetDestination(currentTarget.position);
-            lastTargetPos = currentTarget.position;
-        }
+        agent.isStopped = false;
+        agent.SetDestination(currentTarget.position + offset);
     }
 
-    // ✅ Плавная анимация
     void UpdateAnimation()
     {
         if (anim == null || agent == null)
             return;
 
-        // нормализуем скорость
-        float normalized = agent.velocity.magnitude / agent.speed;
-        normalized = Mathf.Clamp01(normalized);
+        // ✅ desiredVelocity — НЕ скачет, в отличие от velocity
+        float desired = agent.desiredVelocity.magnitude;
 
-        // масштабируем под Blend Tree (Idle=0, Walk=1, Run=3)
+        // ✅ нормализуем 0–1
+        float normalized = Mathf.Clamp01(desired / agent.speed);
+
+        // ✅ масштаб под Blend Tree (Idle=0, Walk=1, Run=3)
         float targetSpeed = normalized * 3f;
 
-        // сглаживаем
-        float smoothSpeed = Mathf.Lerp(anim.GetFloat("Speed"), targetSpeed, Time.deltaTime * 8f);
+        // ✅ сглаживание
+        float smooth = Mathf.Lerp(anim.GetFloat("Speed"), targetSpeed, Time.deltaTime * 10f);
 
-        anim.SetFloat("Speed", smoothSpeed);
+        anim.SetFloat("Speed", smooth);
     }
 }
